@@ -1,0 +1,26 @@
+<div class="jumbotron text-center bg-transparent">
+  <h3>What does this API do?</h3>
+  <p>It finds jobs related to JavaScript in Skåne. That's it. </p>
+  </div>
+
+<br>
+<article class="card-columns">
+  <div class="card bg-transparent mb-3" style="max-width: 18rem;" *ngFor="let a of jobbs">
+    <div class="card-header bg-dark text-warning font-weight-bold">{{a.annonsrubrik}}</div>
+    <div class="card-body border border-white">
+      <h5 class="card-title font-weight-bold">{{a.yrkesbenamning}}</h5>
+      <p class="cardt-text">{{a.kommunnamn}}, {{a.arbetsplatsnamn}}</p>
+      <p class="card-text">
+        {{a.annonsurl}}
+      </p>
+    </div>
+  </div>
+  <br>
+</article>
+
+<!--AF API:-->
+<!--matchningslista / matchningdata{yrkesbenamning, kommunnamn, annonsurl, publiceraddatum}-->
+<!--sök ord, t.ex. javascript i annonstext: {annons.annonstext}-->
+
+<!--skåne län, lanid=12, Malmö kommunkod=1280, Lanskrona kommunkod=1282, Lund kommunkod=1281, Hsb=1283 -->
+<!--platsannons{ annons {yrkesbenamning, annonstext, kommunnamn, publiceraddatum, platsannonsUrl}}-->
